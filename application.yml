@@ -1,8 +1,17 @@
-server:
-  port: 80 
-  
-eureka:
-  client:
-    register-with-eureka: false #不允许自己注册
-    service-url: 
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ 
+spring: 
+  profiles: 
+  active: 
+  - dev
+---
+spring: 
+  profiles: dev  #开发环境
+  application: 
+    name: cloudparent-config-dev
+
+---
+spring: 
+  profiles: test  #测试环境
+  application: 
+    name: cloudparent-config-test
+
+#必须utf-8格式保存，否则出错
