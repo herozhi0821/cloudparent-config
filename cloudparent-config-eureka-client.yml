@@ -8,7 +8,7 @@ server:
   
 spring: 
   profiles: dev
-    application:  cloudparent-config-eureka-client
+    application: cloudparent-config-eureka-client
 eureka:
   instance:
     hostname: eureka7001.com
