@@ -2,13 +2,15 @@ spring:
   profiles: 
     active: 
     - dev
+
 ---
+
 server:
   port: 7001
-  
 spring: 
   profiles: dev
     application: cloudparent-config-eureka-client
+
 eureka:
   instance:
     hostname: eureka7001.com
@@ -20,12 +22,13 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
 
 ---
-server:
-  port: 7001
 
+server:
+  port: 7011
 spring: 
   profiles: test
     application: cloudparent-config-eureka-client
+
 eureka:
   instance:
     hostname: eureka7001.com
@@ -34,4 +37,4 @@ eureka:
     fetch-registry: false #false表示自己就是注册中心，维护服务示例不去检索服务
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7011/eureka/
