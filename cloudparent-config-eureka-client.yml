@@ -9,8 +9,8 @@ server:
   port: 7001
 spring: 
   profiles: dev
-    application: 
-      name: cloudparent-config-eureka-client
+  application: 
+    name: cloudparent-config-eureka-client
 
 eureka:
   instance:
@@ -28,8 +28,8 @@ server:
   port: 7011
 spring: 
   profiles: test
-    application: 
-      name: cloudparent-config-eureka-client
+  application: 
+    name: cloudparent-config-eureka-client
 
 eureka:
   instance:
